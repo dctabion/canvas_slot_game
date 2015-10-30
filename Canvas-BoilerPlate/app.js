@@ -45,11 +45,13 @@ window.onload = function() {
 
 var beatlesMax = Math.max(johnValue, paulValue, georgeValue, ringoValue);
 var beatlesMin = Math.min(johnValue, paulValue, georgeValue, ringoValue);
+//calculate the max/min beatles y for each round
+
 
 if (beatlesMax-beatlesMin<30) {
   var appleimg = new Image();
   appleimg.onload = function() {
-  ctx.drawImage(appleimg, 200 , 125);
+  ctx.drawImage(appleimg, 100 , 40);
   }
   appleimg.src = "http://i.imgur.com/viEet9O.png";;
   };
