@@ -1,0 +1,31 @@
+body {
+  background: url(http://i.imgur.com/OWYEm1C.jpg);
+   background-size: cover;
+ }
+
+.btn {
+  border-radius: 28px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 29px;
+  background: #bbda55;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  align: center
+}
+
+.btn:hover {
+  background: #9eb848;
+  text-decoration: none;
+}
+
+#canvas {
+  border: 10px solid #BADA55;
+  border-radius: 25px;
+  background: url(http://i.imgur.com/8n2p7bO.jpg)
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12;
+}
