@@ -3,27 +3,59 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Canvas</title>
+    <title>Rock &amp; Roll Slots: The Beatles</title>
+    <link rel="icon" type="image/gif" href="beatlesicon.jpg" />
     <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300|Exo:400,600,300,900,500italic,100italic' rel='stylesheet' type='text/css'>
   </head>
 
-  <body id = "main" align = "center">
-  
+  <body id = "main">
+  <aside id = "sidebar">
+    <table>
+      <tr>
+      <td><div id = "beatlesBtn"></div></td>
+    </tr>
+    <tr>
+      <td><div id = "kissBtn"></div></td>
+    </tr>
+    <tr>
+      <td><div id = "lzBtn"></div></td>
+    </tr>
+  </table>
+  </aside>
+  <div id = "content" align = "center">
   <div id = 'beatlesGame'>
-      <p>Keep refreshing your page until all the Beatles are in a row!<p>
-      <p>You win when you see the Beatles logo!</p>
+    <p>Hit the button below (or ⌘R) until all the Beatles are in a row.</p>
+    <p> You win when you see the Beatles logo! </p>
+<!--
+      <p>
+        <ul>
+          DIFFICULTY:
+          <a class = "nav" id = "easy" href = ""><li>EASY</li></a>
+          <li><a class = "nav" id = "med" href = "">MEDIUM</a></li>
+          <li><a class = "nav" id = "hard" href = "">HARD</a></li>
+        </ul>
+      </p>
 
-  <div id = "message"></div>
+      ^ trying levels
+-->
+
+<!--
+  <div id = "message"><h4> </h4></div>
+
+    ^looping message
+-->
 
   <canvas id="canvas" width = "500" height = "350"></canvas>
+    <p id = "message">  </p>
+    <p class = "small">&nbsp;</p>
+  <p><a id = "btn" href = " ">↻</a></p>
+  </div>
 
-  <p><a class = "btn" href = "canvas.html">↻</a></p>
-
+</div>
   </body>
-
   <script src='app.js'></script>
 
-  </div>
+
 
 </html>

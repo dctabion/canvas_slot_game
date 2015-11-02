@@ -2,9 +2,11 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 //get random integer function
+var loserMessages = ['Who are you Yoko? Get those Beatles TOGETHER!', 'You\'re a loooooooser! Try again!', 'Did someone smack you with Maxwell\'s Silver Hammer? Try again!', 'Don\'t you dare let it be! Try again!', 'Yesterday, all your troubles seemed so far away. Try again!'];
+
+var lose = loserMessages[getRandomInt(0,loserMessages.length)];
 
 window.onload = function() {
-
 
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -20,35 +22,35 @@ window.onload = function() {
     johnimg.onload = function() {
     ctx.drawImage(johnimg, 60, johnValue);
     }
-    johnimg.src = "http://i.imgur.com/RsnqEqE.png";
+    johnimg.src = "beatles/john.svg";
     var paulimg = new Image();
 // loads John
 
     paulimg.onload = function() {
     ctx.drawImage(paulimg, 160, paulValue);
     }
-    paulimg.src = "http://i.imgur.com/SJ8lGKd.png";
+    paulimg.src = "beatles/paul.svg";
 //loads paul
 
     var georgeimg = new Image();
     georgeimg.onload = function() {
     ctx.drawImage(georgeimg, 260, georgeValue);
     }
-    georgeimg.src = "http://i.imgur.com/fclxApe.png";
+    georgeimg.src = "beatles/george.svg";
 //loads george
 
     var ringoimg = new Image();
     ringoimg.onload = function() {
     ctx.drawImage(ringoimg, 360, ringoValue);
     }
-    ringoimg.src = "http://i.imgur.com/K5SVUrZ.png";
+    ringoimg.src = "beatles/ringo.svg";
 //loads ringo
 
 var beatlesMax = Math.max(johnValue, paulValue, georgeValue, ringoValue);
 var beatlesMin = Math.min(johnValue, paulValue, georgeValue, ringoValue);
 //calculate the max/min beatles y for each round
 
-if (beatlesMax-beatlesMin<50)
+if (beatlesMax-beatlesMin<55)
   {
   ctx.fillStyle = '#BADA55';
   ctx.fillRect(40,0,420,350);
@@ -57,8 +59,16 @@ if (beatlesMax-beatlesMin<50)
   ctx.drawImage(appleimg, 400 , 250);
   }
   appleimg.src = "http://i.imgur.com/B6xUcOa.png";
-  };
-  console.log('you win!');
+
+  document.getElementById('message').style.color = "#9eb848";
+  document.getElementById('message').innerHTML = "ZOMG YOU WON!!! Play again?";
+
+
+} else {
+
+  document.getElementById('message').innerHTML = lose;
+}
+  ;
 }
 //loads the logo if the Beatles are in a row
 

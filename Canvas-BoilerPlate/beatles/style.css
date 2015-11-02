@@ -1,20 +1,30 @@
-body {
-  background: url(http://i.imgur.com/OWYEm1C.jpg);
-   background-size: cover;
+#sidebar {
+  width: 25%;
+  float: left;
+  position: fixed;
+  top: 50px;
+  left: 10px;
+}
+
+#content {
+  background: url(beatles/beatlesbkg.jpg);
+   background-size: 99%;
+   width: 100%;
+   float: right
  }
 
-.btn {
+#btn {
   border-radius: 28px;
   font-family: Arial;
   color: #000000;
-  font-size: 29px;
+  font-size: 35px;
   background: #bbda55;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   align: center
 }
 
-.btn:hover {
+#btn:hover {
   background: #9eb848;
   text-decoration: none;
 }
@@ -25,7 +35,62 @@ body {
   background: url(http://i.imgur.com/8n2p7bO.jpg)
 }
 
+#message {
+  font-weight: bolder;
+}
+
+#beatlesBtn {
+  background-image: url(http://i.imgur.com/S3ofJpn.jpg);
+  width: 230px;
+  height: 85px;
+}
+
+
+#kissBtn {
+  background-image: url(http://i.imgur.com/htnvlnT.jpg);
+  width: 230px;
+  height: 85px;
+}
+
+#kissBtn:hover {
+  background-image: url(http://i.imgur.com/7wWTYdE.jpg);
+}
+
+#lzBtn {
+  background-image: url(http://i.imgur.com/0q6RmMu.jpg);
+  width: 230px;
+  height: 85px;
+}
+
+#lzBtn:hover {
+  background-image: url(http://i.imgur.com/A1h6uN0.jpg);
+}
+
+
+
 p {
   font-family: 'Quicksand', sans-serif;
   font-size: 12;
+  line-height: 80%;
+}
+p.small {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 5;
+  line-height: 60%;
+}
+
+ul {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12;
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+}
+
+li {
+  display: inline ;
+}
+
+td {
+  padding: 20px;
 }
