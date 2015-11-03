@@ -7,10 +7,9 @@
 }
 
 #content {
-  background: url(beatles/beatlesbkg.jpg);
+  background: url(LedZep/lzbkg.jpg);
    background-size: 99%;
    width: 100%;
-   float: right
  }
 
 #button {
@@ -18,25 +17,22 @@
   font-family: Arial;
   color: #000000;
   font-size: 25px;
-  background: #bbda55;
+  background: #ffb951;
   padding: 5px 20px 5px 20px;
   text-decoration: none;
   align: center
 }
 
 #button:hover {
-  background: #9eb848;
+  background: #FFC36A;
   text-decoration: none;
 }
 
-#content {
-  float: left;
-}
 
 #canvas {
-  border: 10px solid #BADA55;
+  border: 10px solid #ffb951;
   border-radius: 25px;
-  background: url(canvasbackground.jpg)
+  background: url(http://i.imgur.com/8n2p7bO.jpg)
 }
 
 #message {
@@ -44,32 +40,31 @@
 }
 
 #beatlesBtn {
-  background-image: url(http://i.imgur.com/S3ofJpn.jpg);
+  background-image: url(sidebarbuttons/nBeatles.png);
   width: 200px;
   height: 85px;
 }
 
+#beatlesBtn:hover {
+  background-image: url(sidebarbuttons/overBeatles.png);
+}
+
 
 #kissBtn {
-  background-image: url(http://i.imgur.com/htnvlnT.jpg);
+  background-image: url(sidebarbuttons/nKiss.png);
   width: 200px;
   height: 85px;
 }
 
 #kissBtn:hover {
-  background-image: url(http://i.imgur.com/7wWTYdE.jpg);
+  background-image: url(sidebarbuttons/overKiss.png);
 }
 
 #lzBtn {
-  background-image: url(http://i.imgur.com/0q6RmMu.jpg);
+  background-image: url(sidebarbuttons/overLedZep.png);
   width: 200px;
   height: 85px;
 }
-
-#lzBtn:hover {
-  background-image: url(http://i.imgur.com/A1h6uN0.jpg);
-}
-
 
 
 p {

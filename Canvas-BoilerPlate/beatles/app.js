@@ -105,14 +105,14 @@ var runCanvas = function() {
 
 
 
-  document.getElementById('button').onclick = function () {
-  console.log('button is working')
-  var canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  runCanvas();
-  console.log(difficulty);
-  }
+    document.getElementById('button').onclick = function () {
+    console.log('button is working')
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    runCanvas();
+    console.log(difficulty);
+    }
 //loads the logo if the Beatles are in a row
 
 //the end
