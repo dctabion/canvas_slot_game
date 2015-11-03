@@ -13,21 +13,22 @@
    float: right
  }
 
-#btn {
+#button {
   border-radius: 28px;
   font-family: Arial;
   color: #000000;
-  font-size: 35px;
+  font-size: 25px;
   background: #bbda55;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 20px 5px 20px;
   text-decoration: none;
   align: center
 }
 
-#btn:hover {
+#button:hover {
   background: #9eb848;
   text-decoration: none;
 }
+
 
 #canvas {
   border: 10px solid #BADA55;
@@ -81,10 +82,11 @@ p.small {
 
 ul {
     font-family: 'Quicksand', sans-serif;
-    font-size: 12;
+    font-size: 14;
     list-style-type: none;
     margin: 10;
     padding: 10;
+    font-weight: bold;
 }
 
 li {
