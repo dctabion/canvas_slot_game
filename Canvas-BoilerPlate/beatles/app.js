@@ -3,7 +3,7 @@ function getRandomInt(min, max) {
 }
 //get random integer function
 var loserMessages = ['Who are you Yoko? Get those Beatles TOGETHER!', 'You\'re a loooooooser! Try again!', 'Did someone smack you with Maxwell\'s Silver Hammer? Try again!', 'Don\'t you dare let it be! Try again!', 'Yesterday, all your troubles seemed so far away. Try again!'];
-//loser messages above 
+//loser messages above
 var messagebox = document.getElementById('message');
 //message box declaration
 
@@ -19,7 +19,7 @@ var hardBtn = document.getElementById('hard');
 easyBtn.onclick = function () {
   console.log("Diff is EASY");
   difficulty = 80;
-    easyBtn.style.color = "#ffb951";
+    easyBtn.style.color = "#BADA55";
     medBtn.style.color = "black";
     hardBtn.style.color = "black";
     console.log(difficulty);
@@ -28,7 +28,7 @@ easyBtn.onclick = function () {
 medBtn.onclick = function () {
   console.log("Diff is medium");
   difficulty = 60;
-  medBtn.style.color = "#ffb951";
+  medBtn.style.color = "#BADA55";
   easyBtn.style.color = "black";
   hardBtn.style.color = "black";
   console.log(difficulty);
@@ -37,7 +37,7 @@ medBtn.onclick = function () {
 hardBtn.onclick = function () {
   console.log("Diff is hard");
   difficulty = 30;
-  hardBtn.style.color = "#ffb951"
+  hardBtn.style.color = "#BADA55"
   easyBtn.style.color = "black";
   medBtn.style.color = "black";
     console.log(difficulty);
