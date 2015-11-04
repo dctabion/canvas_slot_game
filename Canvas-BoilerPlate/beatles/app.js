@@ -3,32 +3,43 @@ function getRandomInt(min, max) {
 }
 //get random integer function
 var loserMessages = ['Who are you Yoko? Get those Beatles TOGETHER!', 'You\'re a loooooooser! Try again!', 'Did someone smack you with Maxwell\'s Silver Hammer? Try again!', 'Don\'t you dare let it be! Try again!', 'Yesterday, all your troubles seemed so far away. Try again!'];
-var difficulty = 60;
+//loser messages above 
+var messagebox = document.getElementById('message');
+//message box declaration
 
-document.getElementById('easy').onclick = function () {
+var difficulty = 60;
+//initially the difficulty is set to medium (ie. 60)
+
+
+var easyBtn = document.getElementById('easy');
+var medBtn = document.getElementById('med');
+var hardBtn = document.getElementById('hard');
+//Declaring the difficulty buttons as variables
+
+easyBtn.onclick = function () {
   console.log("Diff is EASY");
   difficulty = 80;
-    document.getElementById('easy').style.color = "green";
-    document.getElementById('med').style.color = "black";
-    document.getElementById('hard').style.color = "black";
+    easyBtn.style.color = "#ffb951";
+    medBtn.style.color = "black";
+    hardBtn.style.color = "black";
     console.log(difficulty);
   }
 
-document.getElementById('med').onclick = function () {
+medBtn.onclick = function () {
   console.log("Diff is medium");
   difficulty = 60;
-  document.getElementById('med').style.color = "green";
-  document.getElementById('easy').style.color = "black";
-  document.getElementById('hard').style.color = "black";
+  medBtn.style.color = "#ffb951";
+  easyBtn.style.color = "black";
+  hardBtn.style.color = "black";
   console.log(difficulty);
   }
 
-document.getElementById('hard').onclick = function () {
+hardBtn.onclick = function () {
   console.log("Diff is hard");
   difficulty = 30;
-  document.getElementById('hard').style.color = "green"
-  document.getElementById('easy').style.color = "black";
-  document.getElementById('med').style.color = "black";
+  hardBtn.style.color = "#ffb951"
+  easyBtn.style.color = "black";
+  medBtn.style.color = "black";
     console.log(difficulty);
     }
 
@@ -53,28 +64,28 @@ var runCanvas = function() {
     johnimg.onload = function() {
     ctx.drawImage(johnimg, 60, johnValue);
     }
-    johnimg.src = "beatles/john.svg";
+    johnimg.src = "beatles/beatles/john.svg";
     var paulimg = new Image();
 // loads John
 
     paulimg.onload = function() {
     ctx.drawImage(paulimg, 160, paulValue);
     }
-    paulimg.src = "beatles/paul.svg";
+    paulimg.src = "beatles/beatles/paul.svg";
 //loads paul
 
     var georgeimg = new Image();
     georgeimg.onload = function() {
     ctx.drawImage(georgeimg, 260, georgeValue);
     }
-    georgeimg.src = "beatles/george.svg";
+    georgeimg.src = "beatles/beatles/george.svg";
 //loads george
 
     var ringoimg = new Image();
     ringoimg.onload = function() {
     ctx.drawImage(ringoimg, 360, ringoValue);
     }
-    ringoimg.src = "beatles/ringo.svg";
+    ringoimg.src = "beatles/beatles/ringo.svg";
 //loads ringo
 
     var beatlesMax = Math.max(johnValue, paulValue, georgeValue, ringoValue);
@@ -89,18 +100,17 @@ var runCanvas = function() {
       appleimg.onload = function() {
       ctx.drawImage(appleimg, 400 , 250);
       }
-      appleimg.src = "http://i.imgur.com/B6xUcOa.png";
+      appleimg.src = "beatles/beatles/beatleswin.png";
 
-      document.getElementById('message').style.color = "#9eb848";
-      document.getElementById('message').innerHTML = "ZOMG YOU WON!!! Play again?";
+      messagebox.style.color = "#9eb848";
+      messagebox.innerHTML = "ZOMG YOU WON!!! Play again?";
 
     } else {
-      document.getElementById('message').style.color = "black";
-      document.getElementById('message').innerHTML = loserMessages[getRandomInt(0,loserMessages.length)];
+      messagebox.style.color = "black";
+      messagebox.innerHTML = loserMessages[getRandomInt(0,loserMessages.length)];
       }
   ;
   }
-
 
 
 
@@ -113,6 +123,7 @@ var runCanvas = function() {
     runCanvas();
     console.log(difficulty);
     }
+
 //loads the logo if the Beatles are in a row
 
 //the end

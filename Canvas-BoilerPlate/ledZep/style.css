@@ -1,16 +1,17 @@
 #sidebar {
-  width: 25%;
+  width: 10%;
   float: left;
-  position: fixed;
+  position: relative;
   top: 50px;
   left: 10px;
 }
 
 #content {
-  background: url(LedZep/lzbkg.jpg);
-   background-size: 99%;
-   width: 100%;
+   width: 80%;
+   float: left;
+   margin-right: 1em;
  }
+
 
 #button {
   border-radius: 28px;
@@ -32,7 +33,7 @@
 #canvas {
   border: 10px solid #ffb951;
   border-radius: 25px;
-  background: url(http://i.imgur.com/8n2p7bO.jpg)
+  background: url(canvasbackground.jpg)
 }
 
 #message {
@@ -48,7 +49,6 @@
 #beatlesBtn:hover {
   background-image: url(sidebarbuttons/overBeatles.png);
 }
-
 
 #kissBtn {
   background-image: url(sidebarbuttons/nKiss.png);
@@ -66,6 +66,10 @@
   height: 85px;
 }
 
+body {
+  background: url(ledzep/lzbkg.jpg);
+  background-size: 100%;
+  }
 
 p {
   font-family: 'Quicksand', sans-serif;

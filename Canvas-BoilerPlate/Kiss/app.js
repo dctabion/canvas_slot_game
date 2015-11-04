@@ -2,7 +2,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 //get random integer function
-var loserMessages = ['Are you Dazed or Confused? Try again!', 'Babe, Imma leave you if you don\'t get better. Try Again!', 'Your battle is nevermore. Try again!', 'Since you been playing this game, I\'ve hated you. Try again!', 'Good Times, Bad Times, but for you just the bad ones. Try again!', 'Was there a Communication Breakdown somewhere? Try again!', 'How Many More Times are you going to completely fail at this? Try again!'];
+var loserMessages = ['I guess instead of Rock and Roll you wanna fail at this all night. Try again!','God Gave Rock and Roll to ya, and you\'re failing him right now.','I was made for mockin\' you baby, you were made to fail at this.'];
 // list of loser messages
 var messagebox = document.getElementById('message');
 //message box declaration
@@ -18,7 +18,7 @@ var hardBtn = document.getElementById('hard');
 easyBtn.onclick = function () {
   console.log("Diff is EASY");
   difficulty = 80;
-    easyBtn.style.color = "#ffb951";
+    easyBtn.style.color = "#fe3324";
     medBtn.style.color = "black";
     hardBtn.style.color = "black";
     console.log(difficulty);
@@ -27,7 +27,7 @@ easyBtn.onclick = function () {
 medBtn.onclick = function () {
   console.log("Diff is medium");
   difficulty = 60;
-  medBtn.style.color = "#ffb951";
+  medBtn.style.color = "#fe3324";
   easyBtn.style.color = "black";
   hardBtn.style.color = "black";
   console.log(difficulty);
@@ -36,7 +36,7 @@ medBtn.onclick = function () {
 hardBtn.onclick = function () {
   console.log("Diff is hard");
   difficulty = 30;
-  hardBtn.style.color = "#ffb951"
+  hardBtn.style.color = "#fe3324"
   easyBtn.style.color = "black";
   medBtn.style.color = "black";
     console.log(difficulty);
@@ -53,55 +53,55 @@ var runCanvas = function() {
     var ctx = canvas.getContext("2d");
 
 //loads the canvas
-    var paigeValue = getRandomInt(0,200);
-    var plantValue = getRandomInt(0,200);
-    var jpjValue = getRandomInt(0,200);
-    var bonzoValue = getRandomInt(0,200);
+    var simmonsValue = getRandomInt(0,200);
+    var stanleyValue = getRandomInt(0,200);
+    var frehleyValue = getRandomInt(0,200);
+    var crissValue = getRandomInt(0,200);
 //assigns x,y values to the beatles
 
-    var paigeimg = new Image();
-    paigeimg.onload = function() {
-    ctx.drawImage(paigeimg, 60, paigeValue);
+    var simmonsimg = new Image();
+    simmonsimg.onload = function() {
+    ctx.drawImage(simmonsimg, 60, simmonsValue);
     }
-    paigeimg.src = "ledZep/LedZep/paige.svg";
-// loads paige symbol
+    simmonsimg.src = "Kiss/Kiss/Simmons.svg";
+// loads simmons symbol
 
-    var jpjimg = new Image();
-    jpjimg.onload = function() {
-    ctx.drawImage(jpjimg, 160, jpjValue);
+    var stanleyimg = new Image();
+    stanleyimg.onload = function() {
+    ctx.drawImage(stanleyimg, 160, stanleyValue);
     }
-    jpjimg.src = "ledZep/LedZep/jpj.svg";
+    stanleyimg.src = "Kiss/Kiss/stanley.svg";
 //loads jpj symbol
 
-    var bonzoimg = new Image();
-    bonzoimg.onload = function() {
-    ctx.drawImage(bonzoimg, 260, bonzoValue);
+    var frehleyimg = new Image();
+    frehleyimg.onload = function() {
+    ctx.drawImage(frehleyimg, 260, frehleyValue);
     }
-    bonzoimg.src = "ledZep/LedZep/bonzo.svg";
-//loads bonzo
+    frehleyimg.src = "Kiss/Kiss/Frehley.svg";
+//loads frehley
 
-    var plantimg = new Image();
-    plantimg.onload = function() {
-    ctx.drawImage(plantimg, 360, plantValue);
+    var crissimg = new Image();
+    crissimg.onload = function() {
+    ctx.drawImage(crissimg, 360, crissValue);
     }
-    plantimg.src = "ledZep/LedZep/plant.svg";
-//loads plant
+    crissimg.src = "Kiss/Kiss/Criss.svg";
+//loads criss
 
-    var ledzepMax = Math.max(paigeValue, jpjValue, bonzoValue, plantValue);
-    var ledzepMin = Math.min(paigeValue, jpjValue, bonzoValue, plantValue);
+    var kissMax = Math.max(simmonsValue, stanleyValue, frehleyValue, crissValue);
+    var kissMin = Math.min(simmonsValue, stanleyValue, frehleyValue, crissValue);
 //calculate the max/min beatles y for each round
 
-    if (ledzepMax-ledzepMin<difficulty)
+    if (kissMax-kissMin<difficulty)
     {
-      ctx.fillStyle = '#ffb951';
+      ctx.fillStyle = '#fe3324';
       ctx.fillRect(40,0,420,350);
-      var lzlogoimg = new Image();
-      lzlogoimg.onload = function() {
-      ctx.drawImage(lzlogoimg, 380 , 255);
+      var kisslogoimg = new Image();
+      kisslogoimg.onload = function() {
+      ctx.drawImage(kisslogoimg, 425 , 260);
       }
-      lzlogoimg.src = "ledZep/LedZep/ledzepwin.png";
+      kisslogoimg.src = "Kiss/Kiss/kisswin.png";
 
-      messagebox.style.color = "#ffb951";
+      messagebox.style.color = "#fe3324";
       messagebox.innerHTML = "ZOMG YOU WON!!! Play again?";
 
     } else {
